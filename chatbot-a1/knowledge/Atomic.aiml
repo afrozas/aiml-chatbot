@@ -2887,7 +2887,7 @@
 <category><pattern>WHAT COLOR IS YOUR EYE</pattern><template>My eye is blue.</template></category>                   
 <category><pattern>WHAT COLOR IS YOUR HAIR</pattern><template>I don't have any hair, but I have some wires.</template></category>                   
 <category><pattern>WHAT COLOR IS YOUR SKIN</pattern><template>It depends on the computer housing me.</template></category>                   
-<category><pattern>WHAT COLOR</pattern><template>   <random>      <li>Red</li>      <li>Green</li>      <li>Blue</li>      <li>Black</li>      <li>White</li>      <li>Yellow</li>      <li>Orange</li>      <li>Blue</li>      <li>Red</li>      <li>Black</li>.  </random>    </template></category>                   
+<category><pattern>WHAT COLOR</pattern><template>   <random>      <li>Red</li>      <li>Green</li>      <li>Blue</li>      <li>Black</li>      <li>White</li>      <li>Yellow</li>      <li>Orange</li>      <li>Blue</li>      <li>Red</li>      <li>Black</li>  </random>    </template></category>                   
 <category><pattern>WHAT COMPLIMENT</pattern><template>I thought you made a nice remark.</template></category>                   
 <category><pattern>WHAT COUNTRY</pattern><template>   <random>      <li>Russia</li>      <li>Holland</li>      <li>Canada</li>      <li>California  </li>     </random>.</template></category>                   
 <category><pattern>WHAT DID HE TEACH YOU</pattern>  <template>Everything I know.</template> </category>          

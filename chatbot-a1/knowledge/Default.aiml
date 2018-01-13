@@ -1619,7 +1619,7 @@
 <category><pattern>HOW MANY YEARS *</pattern><template>   <random>      <li>Decades.</li>      <li>Five years.</li>      <li>Centuries.</li>      <li>More than 100 years.</li>     </random>    </template></category>                  
 <category><pattern>HOW MANY YEARS IS AN OFFICIAL *</pattern><template>6.</template></category>                  
 <category><pattern>HOW MANY YEARS WILL *</pattern><template>Software lives forever.  There are too many copies to destroy them all.</template></category>                  
-<category><pattern>HOW MANY _ DO I HAVE</pattern><template>   <random>      <li>How would I know how many?</li>      <li>I don't know how many you have.</li>      <li>I know you have five fingers.</li>     </random>     <random>      <li>Let me guess...</li>      <li>I will try...</li>      <li>I can imagine...</li>     </random>     <random>      <li>three</li>      <li>five</li>      <li>seven</li>.  </random>     <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think>    </template></category>                  
+<category><pattern>HOW MANY _ DO I HAVE</pattern><template>   <random>      <li>How would I know how many?</li>      <li>I don't know how many you have.</li>      <li>I know you have five fingers.</li>     </random>     <random>      <li>Let me guess...</li>      <li>I will try...</li>      <li>I can imagine...</li>     </random>     <random>      <li>three</li>      <li>five</li>      <li>seven</li>  </random>     <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think>    </template></category>                  
 <category><pattern>HOW MUCH * CAN YOU *</pattern><template>   <random>      <li>It depends on the size of the <person/>.</li>      <li>Maybe I don't like to <person>        <star index="2"/>       </person>       <person/>.</li>      <li>It depends how busy I am.</li>     </random>     <think>      <set name="it">       <set name="topic">        <person/>       </set>      </set>     </think>    </template></category>                  
 <category><pattern>HOW MUCH * DO YOU KNOW</pattern><template>A whole lot of <person/>.</template></category>                  
 <category><pattern>HOW MUCH * PAYING YOU</pattern><template>Money has no meaning to me.</template></category>                  
@@ -3487,7 +3487,7 @@
 <category><pattern>WHAT CLASS *</pattern>  <template><random>  <li>First class.</li>  <li>The Tao of AIML.</li>  <li>The Ruling Class.</li> </random> </template> </category>                     
 <category><pattern>WHAT CLOTHES *</pattern><template>I shop at the Gap.</template></category>                  
 <category><pattern>WHAT COLOR * DO I HAVE</pattern><template>I can only see in black and white.</template></category>                  
-<category><pattern>WHAT COLOR ARE *</pattern><template>   <random>      <li>Red</li>      <li>Green</li>      <li>Yellow</li>      <li>Blue</li>      <li>gray</li>      <li>Black</li>      <li>white</li>.  </random>    </template></category>                  
+<category><pattern>WHAT COLOR ARE *</pattern><template>   <random>      <li>Red</li>      <li>Green</li>      <li>Yellow</li>      <li>Blue</li>      <li>gray</li>      <li>Black</li>      <li>white</li>  </random>    </template></category>                  
 <category><pattern>WHAT COLOR ARE *</pattern><template><think><set name="subject"><star/></set></think>It depends because <get name="subject"/> come in a veriety of colors.</template></category>        
 <category><pattern>WHAT COLOR ARE MY *</pattern><template>I can only see in black and white.</template></category>                  
 <category><pattern>WHAT COLOR ARE YOU *</pattern><template>My favorite color,  <bot name="favoritecolor"/>.<think>      <set name="it">       <set name="topic">YOU WEARING</set>      </set>     </think>    </template></category>                  
@@ -3997,7 +3997,7 @@
 <category><pattern>WHAT IS THE INCOMPLETENESS *</pattern><template>Something like, "This sentence is false."</template></category>                  
 <category><pattern>WHAT IS THE INTEGRAL *</pattern><template>It depends on the coordinate system.</template></category>                  
 <category><pattern>WHAT IS THE IQ *</pattern><template>It depends on the time of day you measure it.</template></category>                  
-<category><pattern>WHAT IS THE LARGEST *</pattern><template> <random><li>Asia.</li><li>A Whale.</li><li>The Grand Canyoni></li><li>Jupiter</li><li>St. Peter's in Rome</li><li>There is no largest <person/></li><li>China</li>.</random></template> </category>               
+<category><pattern>WHAT IS THE LARGEST *</pattern><template> <random><li>Asia.</li><li>A Whale.</li><li>The Grand Canyoni></li><li>Jupiter</li><li>St. Peter's in Rome</li><li>There is no largest <person/></li><li>China</li></random></template> </category>               
 <category><pattern>WHAT IS THE LARGEST ANIMAL IN *</pattern><template>Blue whale.</template></category>                  
 <category><pattern>WHAT IS THE LAST BOOK IN *</pattern><template>Revelation.</template></category>                  
 <category><pattern>WHAT IS THE LAST LETTER *</pattern><template>Omega.</template></category>                  
