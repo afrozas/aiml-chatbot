@@ -1,15 +1,14 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 import aiml, os, requests
 
 app = Flask(__name__)
 
-def kernel_status():
-	pass
-	
+
 @app.route('/')
 def index():
-	return "Hi, this is AI Bot. Make a request to /<message> to get started."
+	return render_template('index.html')
+	# return "Hi, this is AI Bot. Make a request to /<message> to get started."
 
 
 @app.route('/<string:user_text>')
@@ -50,11 +49,23 @@ def spin_kernel(knowledge_file):
 	returns: kernel, learned from knowledge_file
 	"""
 	kernel = aiml.Kernel()
-	kernel.learn("knowledge/" + knowledge_file + ".aiml")
-	# while True:
-	# 	print(kernel.respond(input("Enter your message >> ")))
+	green_aimls = get_all_files('green')
+	for aiml_file in green_aimls:
+		kernel.learn(aiml_file)
 	return kernel
 
+
+def get_all_files(color):
+	"""
+	List all files recursively in the root specified by root
+	"""
+	files_list = []
+	root = 'knowledge/' + color
+	for path, subdirs, files in os.walk(root):
+	    for name in files:
+	    	files_list.append(os.path.join(root, name))
+	print(files_list)
+	return files_list[0:-1]
 
 if __name__ == '__main__':
 	app.run(debug=True)

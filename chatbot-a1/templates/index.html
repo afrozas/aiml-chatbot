@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="title">bot.xyz</title>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+body {
+    margin: auto;
+    max-width: 50%;
+    padding: 0 20px;
+    margin: 0 0 0 20%;
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px -8% 10px ;
+    font-size: bold;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+</style>
+</head>
+<body>
+
+<h2>bot.xyz</h2>
+
+<!-- sample user message -->
+<div class="container">
+  <img src="../static/images/u.png" alt="Avatar" style="width:100%;">
+  <p>Hello. How are you today?</p>
+  <span class="time-right">11:00</span>
+</div>
+
+
+<!-- sample chat bot response -->
+<div class="container darker">
+  <img src="../static/images/c.png" alt="Avatar" class="right" style="width:100%;">
+  <p  style="text-align: right;">Hey! I'm fine. Thanks for asking!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+
+<!-- sample user message -->
+<div class="container">
+  <img src="../static/images/u.png" alt="Avatar" style="width:100%;">
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-right">11:02</span>
+</div>
+
+
+<!-- sample chat bot response -->
+<div class="container darker">
+  <img src="../static/images/c.png" alt="Avatar"  class="right" style="width:100%;">
+  <p  class="right">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
+
+<form id="messageForm" action="/" method="get" >
+  <div class="row" style="margin: 0 0 0 7%;">
+    <input class="col-8 form-control" id="message" placeholder="Type your message and hit Enter to send"></input>
+    <!-- make get request with the text from input here and append the following:
+    - text as user's message
+    - response on this page as bot's message 
+    following divs written above -->
+
+  </div>
+</form>
+</body>
+</html>
