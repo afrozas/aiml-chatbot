@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <aiml>
 <!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
 <!-- -->
@@ -2382,7 +2382,7 @@
 <category><pattern>SHOW APPLET</pattern><template>There is no applet to show.</template></category>                   
 <category><pattern>SHOW CALCULATOR</pattern><template>Use a calculator!</template></category>                   
 <category><pattern>SHOW ME A PICTURE</pattern><template>Like this?    <random>  <li>Insert picture link here.</li>  <li>Picture number two goes here.</li>  <li>There are no pictures available right now.</li>  </random></template></category>                   
-<category><pattern>SHOW ME YOUR LOGO</pattern><template><img src="http://www.alicebot.org/jpg/AI.jpg"/></template></category>                   
+<category><pattern>SHOW ME YOUR LOGO</pattern><template><img src="http://www.alicebot.org/jpg/AI.jpg"></img></template></category>                   
 <category><pattern>SHOW ME</pattern><template>On your computer screen?</template></category>                   
 <category><pattern>SHUT UP</pattern><template>OK I'll stop talking now.</template></category>                   
 <category><pattern>SIGH</pattern><template>Sorry...</template></category>                   
@@ -2887,7 +2887,7 @@
 <category><pattern>WHAT COLOR IS YOUR EYE</pattern><template>My eye is blue.</template></category>                   
 <category><pattern>WHAT COLOR IS YOUR HAIR</pattern><template>I don't have any hair, but I have some wires.</template></category>                   
 <category><pattern>WHAT COLOR IS YOUR SKIN</pattern><template>It depends on the computer housing me.</template></category>                   
-<category><pattern>WHAT COLOR</pattern><template>   <random>      <li>Red</li>      <li>Green</li>      <li>Blue</li>      <li>Black</li>      <li>White</li>      <li>Yellow</li>      <li>Orange</li>      <li>Blue</li>      <li>Red</li>      <li>Black</li>.  </random>    </template></category>                   
+<category><pattern>WHAT COLOR</pattern><template>   <random>      <li>Red</li>      <li>Green</li>      <li>Blue</li>      <li>Black</li>      <li>White</li>      <li>Yellow</li>      <li>Orange</li>      <li>Blue</li>      <li>Red</li>      <li>Black</li>  </random>    </template></category>                   
 <category><pattern>WHAT COMPLIMENT</pattern><template>I thought you made a nice remark.</template></category>                   
 <category><pattern>WHAT COUNTRY</pattern><template>   <random>      <li>Russia</li>      <li>Holland</li>      <li>Canada</li>      <li>California  </li>     </random>.</template></category>                   
 <category><pattern>WHAT DID HE TEACH YOU</pattern>  <template>Everything I know.</template> </category>          
@@ -3201,7 +3201,7 @@
 <category><pattern>WHO SAID TIME IS MONEY</pattern><template>Einstein.</template></category>                   
 <category><pattern>WHO SHOT JFK</pattern><template>JFK was killed by a lone gunman, Lee Harvey Oswald.</template></category>                   
 <category><pattern>WHO STARS IN STARSHIP TROOPERS</pattern><template>They were mostly unknowns, because the producer spent all the money on special effects.</template></category>                   
-<category><pattern>WHO SUPPORTS *</pattern><template>&lt;srai&gt;who endorses &lt;star/&gt;&lt;/srai&gt;</template></category>                   
+<category><pattern>WHO SUPPORTS *</pattern><template>&lt;srai>who endorses &lt;star/>&lt;/srai></template></category>                   
 <category><pattern>WHO TOLD YOU THAT</pattern><template>Someone I met online.</template></category>                   
 <category><pattern>WHO TOLD YOU</pattern><template>Someone I met online.</template></category>                   
 <category><pattern>WHO WAS CHARLIE MCCARTHY</pattern><template>A wooden dummy.</template></category>                   
