@@ -1,29 +1,49 @@
 from flask import Flask, request, render_template
+import aiml, os, requests, json
 
-import aiml, os, requests
+from time import sleep
 
 app = Flask(__name__)
+
+atomic_kernel = None
+
+def weather_parser(response):
+	"""
+	"""
+	if response is None:
+		resp = json.load(open("templates/weath.er"))
+	else:
+		resp = json.loads(response)
+	print(resp)
+	current = resp['currently']
+	summary = resp['hourly']['summary']
+	statement = 'It is going to be ' + str(summary.lower()) + ' The temperature is ' + str(current['temperature'])  + ' degrees F, humidity ' + str(current['humidity']) + ', wind speed is ' + str(current['windSpeed']) + ' kmph with a visibility of ' + str(current['visibility']) + ' kilometres.'
+	return statement
+
+def weather(place):
+	place = "17.3850,78.4867"
+	url = "https://api.darksky.net/forecast/f0a1f30256be08ae33bc0f9c27ad67fb/" + place
+	forecast = requests.get(url)
+	return weather_parser(forecast.text)
 
 
 @app.route('/')
 def index():
+	global atomic_kernel
+	atomic_kernel= spin_kernel('atomic')
 	return render_template('index.html')
 	# return "Hi, this is AI Bot. Make a request to /<message> to get started."
 
 
-@app.route('/<string:user_text>')
+@app.route('/respond/<string:user_text>')
 def atomic_router(user_text, methods=['GET']):
-	atomic_kernel = spin_kernel('atomic')
-	response = atomic_kernel.respond(user_text.upper())
+	lower_text = user_text.lower() 
+	if lower_text.find('weather') > -1 or lower_text.find('temperature') > -1:
+		response = weather(None)
+	else:
+		response = atomic_kernel.respond(user_text.upper())
+		sleep(len(response)*0.03+1)
 	return response	
-
-
-@app.route('/weather/<place>')
-def weather(place, methods=['GET']):
-	place = "17.3850,78.4867"
-	url = "https://api.darksky.net/forecast/f0a1f30256be08ae33bc0f9c27ad67fb/" + place
-	forecast = requests.get(url)
-	return forecast.text
 
 
 @app.route('/computers/<string:user_text>')

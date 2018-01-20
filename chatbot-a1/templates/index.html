@@ -7,20 +7,29 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <style>
-body {
+
+html {
+    display: table;
     margin: auto;
     max-width: 50%;
-    padding: 0 20px;
-    margin: 0 0 0 20%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    max-width: 50%;
 }
 
 .container {
+    width:100%;
     border: 2px solid #dedede;
     background-color: #f1f1f1;
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px -8% 10px ;
-    font-size: bold;
+    padding: 3px;
+    margin: 10px 0 10px 0;
+    /*font-weight:bold;*/
+    font-size: large;
 }
 
 .darker {
@@ -32,6 +41,42 @@ body {
     content: "";
     clear: both;
     display: table;
+}
+
+.chat {
+    max-height: auto;
+    width: 60vw;
+    border: 2px solid #dedede;
+    background-color: #e6ffff;
+    border-radius: 5px;
+    padding: 0.5vw 4vw 0.5vw 4vw ;
+    margin: 10px 0 10px ;
+}
+
+.chat::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container:hover {
+    background-color: pink;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.darker:hover {
+    background-color: yellow;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.form-control:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .container img {
@@ -57,21 +102,66 @@ body {
     float: left;
     color: #999;
 }
+
 </style>
 </head>
 <body>
 
 <h2>bot.xyz</h2>
 
-<!-- sample user message -->
-<div class="container">
+<div class="chat">
+
+<form id="messageForm" action="/" method="get" >
+  <div class="row" >
+    <input class="col-4 form-control" id="message" placeholder="Type your message and hit Enter to send" style="margin: 5px"></input>
+    <input class="btn-primary col-4 pull-right" type="submit" name="Send" value="Send" style="display: none;"></input>
+  </div>
+</form>
+</div>
+<script type="text/javascript">
+  $(function() {
+    $('.btn-primary').click(function(e) {
+        e.preventDefault();
+        var msg = $('#message').val();
+        var d = new Date(); // for now
+        var time = d.getHours() + ':' + d.getMinutes(); 
+        if(msg.length>0)
+        {
+
+         $('.chat').append('<div class="container"> <img src="../static/images/u.png" alt="Avatar" style="width:50%;"> <p  style="text-align: left;">' + msg + '</p><span class="time-left">' + time + '</span></div>');
+               
+          $.ajax({
+            url: '/respond/' + msg,
+            data: $('form').serialize(),
+            type: 'GET',
+            success: function(response) {
+                console.log(response);
+                var d = new Date(); // for now
+                var time = d.getHours() + ':' + d.getMinutes(); 
+                if(response.length == 0 )
+                  response = 'Sorry, I did not understand that!'
+                $('.chat').append('<div class="container darker"> <img src="../static/images/c.png" alt="Avatar" class="right" style="width:50%;"> <p  style="text-align: right;">' + response + '</p><span class="time-right">' + time + '</span></div>');
+                $('#message').val('');
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });}
+    });
+});
+</script>
+</body>
+</html>
+
+
+
+<!-- <div class="container">
   <img src="../static/images/u.png" alt="Avatar" style="width:100%;">
   <p>Hello. How are you today?</p>
   <span class="time-right">11:00</span>
 </div>
 
 
-<!-- sample chat bot response -->
 <div class="container darker">
   <img src="../static/images/c.png" alt="Avatar" class="right" style="width:100%;">
   <p  style="text-align: right;">Hey! I'm fine. Thanks for asking!</p>
@@ -79,7 +169,6 @@ body {
 </div>
 
 
-<!-- sample user message -->
 <div class="container">
   <img src="../static/images/u.png" alt="Avatar" style="width:100%;">
   <p>Sweet! So, what do you wanna do today?</p>
@@ -87,22 +176,9 @@ body {
 </div>
 
 
-<!-- sample chat bot response -->
 <div class="container darker">
   <img src="../static/images/c.png" alt="Avatar"  class="right" style="width:100%;">
   <p  class="right">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
   <span class="time-left">11:05</span>
 </div>
-
-<form id="messageForm" action="/" method="get" >
-  <div class="row" style="margin: 0 0 0 7%;">
-    <input class="col-8 form-control" id="message" placeholder="Type your message and hit Enter to send"></input>
-    <!-- make get request with the text from input here and append the following:
-    - text as user's message
-    - response on this page as bot's message 
-    following divs written above -->
-
-  </div>
-</form>
-</body>
-</html>
+ -->
