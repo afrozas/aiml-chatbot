@@ -1,13 +1,15 @@
 from flask import Flask, request, render_template
 import aiml, os, requests, json
-
+import datetime
 from time import sleep
+import gc
+from dbconnect import connection
 
 app = Flask(__name__)
 
 atomic_kernel = None
 
-def weather_parser(response):
+def weather_parser(response,place):
 	"""
 	"""
 	if response is None:
@@ -24,7 +26,7 @@ def weather(place):
 	place = "17.3850,78.4867"
 	url = "https://api.darksky.net/forecast/f0a1f30256be08ae33bc0f9c27ad67fb/" + place
 	forecast = requests.get(url)
-	return weather_parser(forecast.text)
+	return weather_parser(forecast.text,place)
 
 
 @app.route('/')
@@ -37,12 +39,21 @@ def index():
 
 @app.route('/respond/<string:user_text>')
 def atomic_router(user_text, methods=['GET']):
-	lower_text = user_text.lower() 
+	lower_text = user_text.lower()
+
 	if lower_text.find('weather') > -1 or lower_text.find('temperature') > -1:
 		response = weather(None)
 	else:
 		response = atomic_kernel.respond(user_text.upper())
 		sleep(len(response)*0.03+1)
+
+	c, conn = connection()
+	c.execute("INSERT INTO chat_logs (msg_user,msg_bot,timestramp) VALUES(%s,%s,%s);",
+	 		  ((user_text),(response), str(datetime.datetime.now())))
+	conn.commit()
+	c.close()
+	conn.close()
+	gc.collect()
 	return response	
 
 

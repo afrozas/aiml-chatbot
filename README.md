@@ -1,4 +1,9 @@
 ## Chatbot ( Artificial Intelligence Assignment )
+Group details 
+Afroz Ahamad : 2015A7PS0119H
+Keval Morabia: 2015A7PS0143H
+Nikhil Joshi : 2015A7PS0179H
+
 
 Chat bot responding to five endpoints:      
 	- index => welcome    
