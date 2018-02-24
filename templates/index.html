@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="title">bot.xyz</title>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+
+html {
+    display: table;
+    margin: auto;
+    max-width: 50%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    margin: auto;
+    max-width: 50%;
+}
+
+.container {
+    width:100%;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 10px 0 10px 0;
+    /*font-weight:bold;*/
+    font-size: large;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.chat {
+    max-height: auto;
+    width: 60vw;
+    border: 2px solid #dedede;
+    background-color: #e6ffff;
+    border-radius: 5px;
+    padding: 0.5vw 4vw 0.5vw 4vw ;
+    margin: 10px 0 10px ;
+}
+
+.chat::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container:hover {
+    background-color: pink;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.darker:hover {
+    background-color: yellow;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.form-control:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+</style>
+</head>
+<body>
+
+<h2>bot.xyz</h2>
+
+<div class="chat">
+
+<form id="messageForm" action="/" method="get" >
+  <div class="row" >
+    <input class="col-4 form-control" id="message" placeholder="Type your message and hit Enter to send" style="margin: 5px"></input>
+    <input class="btn-primary col-4 pull-right" type="submit" name="Send" value="Send" style="display: none;"></input>
+  </div>
+</form>
+</div>
+<script type="text/javascript">
+  $(function() {
+    $('.btn-primary').click(function(e) {
+        e.preventDefault();
+        var msg = $('#message').val();
+        var d = new Date(); // for now
+        var time = d.getHours() + ':' + d.getMinutes(); 
+        if(msg.length>0)
+        {
+
+         $('.chat').append('<div class="container"> <img src="../static/images/u.png" alt="Avatar" style="width:50%;"> <p  style="text-align: left;">' + msg + '</p><span class="time-left">' + time + '</span></div>');
+               
+          $.ajax({
+            url: '/respond/' + msg,
+            data: $('form').serialize(),
+            type: 'GET',
+            success: function(response) {
+                console.log(response);
+                var d = new Date(); // for now
+                var time = d.getHours() + ':' + d.getMinutes(); 
+                if(response.length == 0 )
+                  response = 'Sorry, I did not understand that!'
+                $('.chat').append('<div class="container darker"> <img src="../static/images/c.png" alt="Avatar" class="right" style="width:50%;"> <p  style="text-align: right;">' + response + '</p><span class="time-right">' + time + '</span></div>');
+                $('#message').val('');
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });}
+    });
+});
+</script>
+</body>
+</html>

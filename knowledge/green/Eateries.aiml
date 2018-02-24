@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+<aiml>
+
+<category>
+	<pattern>WHERE TO EAT FOOD</pattern>
+	<template>
+		<random>
+			<li>You can eat food at Yumpys, Bits n Bytes, C3, Juice Center or Cafeteria</li>
+			<li>You should check out Yumpys, Bits n Bytes, C3, Juice Center or Cafeteria</li>
+			<li>Yumpys, Bits n Bytes, C3, Juice Center or Cafeteria serve good food</li>
+		</random>	
+	</template>
+</category>
+
+<category>
+	<pattern>_ EATERIES _</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ EAT</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ FOOD _</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<!-- WHICH -->
+
+<category>
+	<pattern>WHICH _ EAT</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<category>
+	<pattern>WHICH _ FOOD</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<category>
+	<pattern>WHICH _ FOOD _</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<!--SUGGEST-->
+
+<category>
+	<pattern>SUGGEST _ EAT</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<category>
+	<pattern>SUGGEST _ FOOD</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<category>
+	<pattern>SUGGEST _ FOOD _</pattern>
+	<template><srai>WHERE TO EAT FOOD</srai></template>
+</category>
+
+<!-- LUNCH/BREAKFAST/DINNER -->
+<category>
+	<pattern>WHAT _ LUNCH _</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHAT _ LUNCH</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHAT _ BREAKFAST _</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHAT _ BREAKFAST</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHAT _ DINNER _</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHAT _ DINNER</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ LUNCH _</pattern>
+	<template><srai>WHERE TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ LUNCH</pattern>
+	<template><srai>WHERE TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ BREAKFAST _</pattern>
+	<template><srai>WHERE TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ BREAKFAST</pattern>
+	<template><srai>WHERE TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ DINNER _</pattern>
+	<template><srai>WHERE TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHERE _ DINNER</pattern>
+	<template><srai>WHERE TO EAT</srai></template>
+</category>
+
+<!-- Yumpys Menu -->
+<category>
+	<pattern>_ EAT AT YUMPYS</pattern>
+	<template>
+		<random>
+			<li>Yumpys is famous for Maggi, Kebabs and Wraps</li>
+			<li>Maggi, Kebabs and Wraps are delicious at Yumpys</li>
+			<li>I would suggest you to try Maggi, Kebabs or Wraps at Yumpys</li>
+			<li>I have heard people saying about Maggi, Kebabs and Wraps of Yumpys</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>_ EAT AT YUMPYS _</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF YUMPYS _</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF YUMPYS</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ YUMPYS FAMOUS FOR</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT YUMPYS _</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT YUMPYS _</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT YUMPYS</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT YUMPYS</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ YUMPYS _</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ YUMPYS</pattern>
+	<template><srai>WHAT TO EAT AT YUMPYS</srai></template>
+</category>
+
+<!-- BITS n BYTES Menu -->
+<category>
+	<pattern>_ EAT AT BITS N BYTES</pattern>
+	<template>
+		<random>
+			<li>BITS N BYTES is famous for Pizza, Sandwich, Kathi Roll, Burger and Puff</li>
+			<li>Pizza, Sandwich, Kathi Roll, Burger and Puff are delicious at BITS N BYTES</li>
+			<li>I would suggest you to try Pizza, Sandwich, Kathi Roll, Burger and Puff at BITS N BYTES</li>
+			<li>I have heard people saying about Pizza, Sandwich, Kathi Roll, Burger and Puff of BITS N BYTES</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>_ EAT AT BITS N BYTES _</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF BITS N BYTES _</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF BITS N BYTES</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ BITS N BYTES FAMOUS FOR</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT BITS N BYTES _</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT BITS N BYTES _</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT BITS N BYTES</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT BITS N BYTES</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ BITS N BYTES _</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ BITS N BYTES</pattern>
+	<template><srai>WHAT TO EAT AT BITS N BYTES</srai></template>
+</category>
+
+<!-- C3 Menu -->
+<category>
+	<pattern>_ EAT AT C3</pattern>
+	<template>
+		<random>
+			<li>C3 is famous for Samosa, Dosa, Idli, Chats, Shakes and Sundaes</li>
+			<li>Samosa, Dosa, Idli, Chats, Shakes and Sundaes are delicious at C3</li>
+			<li>I would suggest you to try Samosa, Dosa, Idli, Chats, Shakes and Sundaes at C3</li>
+			<li>I have heard people saying about Samosa, Dosa, Idli, Chats, Shakes and Sundaes of C3</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>_ EAT AT C3 _</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF C3 _</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF C3</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ C3 FAMOUS FOR</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT C3 _</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT C3 _</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT C3</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT C3</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ C3 _</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ C3</pattern>
+	<template><srai>WHAT TO EAT AT C3</srai></template>
+</category>
+
+<!-- Cafeteria Menu -->
+<category>
+	<pattern>_ EAT AT CAFETERIA</pattern>
+	<template>
+		<random>
+			<li>CAFETERIA is famous for Coffee, Milk, Tea, Biscuits, Burger, Puff, Milk Shakes and Cold Drinks</li>
+			<li>Coffee, Milk, Tea, Biscuits, Burger, Puff, Milk Shakes and Cold Drinks are delicious at CAFETERIA</li>
+			<li>I would suggest you to try Coffee, Milk, Tea, Biscuits, Burger, Puff, Milk Shakes and Cold Drinks at CAFETERIA</li>
+			<li>I have heard people saying about Coffee, Milk, Tea, Biscuits, Burger, Puff, Milk Shakes and Cold Drinks of CAFETERIA</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>_ EAT AT CAFETERIA _</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF CAFETERIA _</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF CAFETERIA</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ CAFETERIA FAMOUS FOR</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT CAFETERIA _</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT CAFETERIA _</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT CAFETERIA</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT CAFETERIA</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ CAFETERIA _</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ CAFETERIA</pattern>
+	<template><srai>WHAT TO EAT AT CAFETERIA</srai></template>
+</category>
+
+<!-- FRUIT CENTER MENU -->
+<category>
+	<pattern>_ EAT AT JUICE CENTER</pattern>
+	<template>
+		<random>
+			<li>JUICE CENTER is famous for Fruit Dish, Fruit Juice, Milk Shakes and Cold Drinks</li>
+			<li>Fruit Dish, Fruit Juice, Milk Shakes and Cold Drinks are delicious at JUICE CENTER</li>
+			<li>I would suggest you to try Fruit Dish, Fruit Juice, Milk Shakes and Cold Drinks at JUICE CENTER</li>
+			<li>I have heard people saying about Fruit Dish, Fruit Juice, Milk Shakes and Cold Drinks of JUICE CENTER</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>_ EAT AT JUICE CENTER _</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF JUICE CENTER _</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU OF JUICE CENTER</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ JUICE CENTER FAMOUS FOR</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT JUICE CENTER _</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT JUICE CENTER _</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVED AT JUICE CENTER</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE AT JUICE CENTER</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ JUICE CENTER _</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<category>
+	<pattern>_ FOOD _ JUICE CENTER</pattern>
+	<template><srai>WHAT TO EAT AT JUICE CENTER</srai></template>
+</category>
+
+<!-- WHAT TO EAT -->
+<category>
+	<pattern>WHAT TO EAT</pattern>
+	<template>
+	You can eat from Maggi, Kebabs, Wraps, Pizza, Sandwich, Kathi Roll, Burger, Puff, Samosa, Dosa, Idli, Chats, Shakes, Sundaes, Coffee, Milk, Tea, Biscuits, Fruit Dish and Fruit Juice.
+	</template>
+</category>
+
+<category>
+	<pattern>WHAT CAN I EAT</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>WHAT CAN I EAT _</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ WANT TO EAT _</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ WANT TO EAT</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ HUNGRY</pattern>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE</pattern>
+	<that>WHERE TO EAT FOOD</that>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ SERVE _</pattern>
+	<that>WHERE TO EAT FOOD</that>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU _</pattern>
+	<that>WHERE TO EAT FOOD</that>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<category>
+	<pattern>_ MENU</pattern>
+	<that>WHERE TO EAT FOOD</that>
+	<template><srai>WHAT TO EAT</srai></template>
+</category>
+
+<!-- FOOD COST -->
+<category>
+	<pattern>_ COST _</pattern>
+	<template>Prices keep on changing. You should check with them</template>	
+</category>
+
+<category>
+	<pattern>_ RATE _</pattern>
+	<template>Prices keep on changing. You should check with them</template>	
+</category>
+
+<category>
+	<pattern>_ PRICE _</pattern>
+	<template>Prices keep on changing. You should check with them</template>	
+</category>
+
+<!-- WHERE TO EAT SOMETHING -->
+<category>
+	<pattern>_ Maggi _</pattern>
+	<template>You can eat Maggi at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ Kebabs _</pattern>
+	<template>You can eat Kebabs at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ Kebab _</pattern>
+	<template>You can eat Kebab at Bits N Bytes</template>	
+	</category>
+
+<category>
+	<pattern>_ Wraps _</pattern>
+	<template>You can eat Wraps at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ PIZZA _</pattern>
+	<template>You can eat Pizza at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ PIZZAS _</pattern>
+	<template>You can eat Pizzas at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ SANDWICH _</pattern>
+	<template>You can eat Sandwich at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ SANDWICHES _</pattern>
+	<template>You can eat Sandwiches at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ KATHI ROLL _</pattern>
+	<template>You can eat Kathi Roll at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ KATHI ROLLS _</pattern>
+	<template>You can eat Kathi Rolls at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ BURGER _</pattern>
+	<template>You can eat Burger at Bits N Bytes or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ BURGERS _</pattern>
+	<template>You can eat Burgers at Bits N Bytes or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ PUFF _</pattern>
+	<template>You can eat Puff at Bits N Bytes or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ SAMOSA _</pattern>
+	<template>You can eat Samosa at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SAMOSAS _</pattern>
+	<template>You can eat Samosas at C3</template>	
+</category>
+
+<category>
+	<pattern>_ DOSA _</pattern>
+	<template>You can eat Dosa at C3</template>	
+</category>
+
+<category>
+	<pattern>_ DOSAS _</pattern>
+	<template>You can eat Dosas at C3</template>	
+</category>
+
+<category>
+	<pattern>_ IDLI _</pattern>
+	<template>You can eat Idli at C3</template>	
+</category>
+
+<category>
+	<pattern>_ CHAT _</pattern>
+	<template>You can eat a CHAT at C3</template>	
+</category>
+
+<category>
+	<pattern>_ CHATS _</pattern>
+	<template>You can eat Chats at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SHAKE _</pattern>
+	<template>You can have a Shake at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SHAKES _</pattern>
+	<template>You can have Shakes at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SUNDAE _</pattern>
+	<template>You can have a Sundae at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SUNDAES _</pattern>
+	<template>You can have Sundaes at C3</template>	
+</category>
+
+<category>
+	<pattern>_ COFFE _</pattern>
+	<template>You can have Coffee at C3 or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ TEA _</pattern>
+	<template>You can have Tea at C3 or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ MILK _</pattern>
+	<template>You can have Milk at C3 or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ BISCUITS _</pattern>
+	<template>You can have Biscuits at Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT DISH _</pattern>
+	<template>You can eat a Fruit Dish at Juice Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT DISHES _</pattern>
+	<template>You can eat a Fruit Dishes at Juice Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT JUICE _</pattern>
+	<template>You can have Fruit Juice at Fruit Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT JUICES _</pattern>
+	<template>You can have Fruit Juices at Fruit Center</template>	
+</category>
+
+<category>
+	<pattern>_ Maggi</pattern>
+	<template>You can eat Maggi at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ Kebabs</pattern>
+	<template>You can eat Kebabs at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ Kebab</pattern>
+	<template>You can eat Kebab at Bits N Bytes</template>	
+	</category>
+
+<category>
+	<pattern>_ Wraps</pattern>
+	<template>You can eat Wraps at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ PIZZA</pattern>
+	<template>You can eat Pizza at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ PIZZAS</pattern>
+	<template>You can eat Pizzas at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ SANDWICH</pattern>
+	<template>You can eat Sandwich at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ SANDWICHES</pattern>
+	<template>You can eat Sandwiches at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ KATHI ROLL</pattern>
+	<template>You can eat Kathi Roll at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ KATHI ROLLS</pattern>
+	<template>You can eat Kathi Rolls at Bits N Bytes</template>	
+</category>
+
+<category>
+	<pattern>_ BURGER</pattern>
+	<template>You can eat Burger at Bits N Bytes or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ BURGERS</pattern>
+	<template>You can eat Burgers at Bits N Bytes or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ PUFF</pattern>
+	<template>You can eat Puff at Bits N Bytes or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ SAMOSA</pattern>
+	<template>You can eat Samosa at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SAMOSAS</pattern>
+	<template>You can eat Samosas at C3</template>	
+</category>
+
+<category>
+	<pattern>_ DOSA</pattern>
+	<template>You can eat Dosa at C3</template>	
+</category>
+
+<category>
+	<pattern>_ DOSAS</pattern>
+	<template>You can eat Dosas at C3</template>	
+</category>
+
+<category>
+	<pattern>_ IDLI</pattern>
+	<template>You can eat Idli at C3</template>	
+</category>
+
+<category>
+	<pattern>_ CHAT</pattern>
+	<template>You can eat a CHAT at C3</template>	
+</category>
+
+<category>
+	<pattern>_ CHATS</pattern>
+	<template>You can eat Chats at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SHAKE</pattern>
+	<template>You can have a Shake at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SHAKES</pattern>
+	<template>You can have Shakes at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SUNDAE</pattern>
+	<template>You can have a Sundae at C3</template>	
+</category>
+
+<category>
+	<pattern>_ SUNDAES</pattern>
+	<template>You can have Sundaes at C3</template>	
+</category>
+
+<category>
+	<pattern>_ COFFE</pattern>
+	<template>You can have Coffee at C3 or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ TEA</pattern>
+	<template>You can have Tea at C3 or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ MILK</pattern>
+	<template>You can have Milk at C3 or Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ BISCUITS</pattern>
+	<template>You can have Biscuits at Cafeteria</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT DISH</pattern>
+	<template>You can eat a Fruit Dish at Juice Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT DISHES</pattern>
+	<template>You can eat a Fruit Dishes at Juice Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT JUICE</pattern>
+	<template>You can have Fruit Juice at Fruit Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT JUICES</pattern>
+	<template>You can have Fruit Juices at Fruit Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUIT</pattern>
+	<template>You can eat a Fruit Dish at Juice Center</template>	
+</category>
+
+<category>
+	<pattern>_ FRUITS</pattern>
+	<template>You can eat a Fruit Dishes at Juice Center</template>	
+</category>
+
+<category>
+	<pattern>_ JUICE</pattern>
+	<template>You can have Fruit Juice at Fruit Center</template>	
+</category>
+
+<category>
+	<pattern>_ JUICES</pattern>
+	<template>You can have Fruit Juices at Fruit Center</template>	
+</category>
+
+</aiml>
